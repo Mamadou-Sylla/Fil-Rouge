@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "email": "duncan@gmail.com",
+      "password": "$2a$10$PC6uR.y68sOslyrnuJ/tFeHP6UILxs5iwoDF4pBjd3nI852mA6BeO",
+      "id": 1
+    },
+    {
+      "email": "momo@sylla.com",
+      "password": "$2a$10$hX1TEON1z1kYBfgwZ2wTTuNMB6Ma4lcXzdnwPDvXV/rfjiD2ouRJ.",
+      "id": 2
+    }
+  ]
+}

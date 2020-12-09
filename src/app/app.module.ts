@@ -39,10 +39,10 @@ import {MatIconModule} from '@angular/material/icon';
     MatIconModule
     ],
   providers: [
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}  
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ],
   schemas: [
-    CUSTOM_ELEMENTS_SCHEMA 
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   bootstrap: [AppComponent]
 })
