@@ -1,0 +1,26 @@
+<div class="form-group body" fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex=28 fxFlex-height=12>
+        <h1 fxLayoutAlign ="center">Authentification</h1>
+        <form class="example-form">
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. name@example.com">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">Ce champ est obligatoire</mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">Email est <strong>obligatoire</strong></mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="example-full-width">
+                    <mat-label>Mot de passe</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="Mot de passe" required>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></button>
+                </mat-form-field>
+            <div class="form-group">
+                <button class="btn-connect" mat-raised-button color="primary">Connexion</button>
+            </div> 
+            </div>
+        </form>
+    </mat-card>
+</div>
