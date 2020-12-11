@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import {HttpClient} from '@angular/common/http';
+import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
 
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -24,10 +27,28 @@ export class AuthComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   hide = true;
+  userForm: any = {};
+  userData = {
+    password: '',
+    email: '',
+  };
+  constructor(private http: HttpClient ,
+              public Authservices: AuthService,
+              private router: Router) {}
 
-  constructor() { }
 
   ngOnInit(): void {
+    this.userForm = new FormGroup(
+      {
+        email: new FormControl('', [Validators.required, Validators.email]),
+        password: new FormControl('', [Validators.required, Validators.minLength(6)])
+      }
+    );
   }
-
+  // tslint:disable-next-line:typedef
+  onSubmit() {
+    this.Authservices.login(this.userForm);
+      /*this.router.navigate(['/users']);*/
+    console.log(this.Authservices.decodeToken());
+  }
 }

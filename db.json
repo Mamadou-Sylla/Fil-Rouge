@@ -6,9 +6,21 @@
       "id": 1
     },
     {
-      "email": "momo@sylla.com",
-      "password": "$2a$10$hX1TEON1z1kYBfgwZ2wTTuNMB6Ma4lcXzdnwPDvXV/rfjiD2ouRJ.",
+      "email": "sylla@momo.com",
+      "password": "$2a$10$RZI5QpMjx7UfN4Pa4Us0A.iSRBpkrb1Ygbc8JttU2vVIDOpMRMQpK",
       "id": 2
+    },
+    {
+      "email": "omar@faye.com",
+      "password": "$2a$10$7bcKtW3YOUhaE/rUeX34O.50aF2EL0PgPIlpncdWYP1Gr6EuWuiUS",
+      "id": 3
+    },
+    {
+      "email": "momosylla1998@gmail.com",
+      "password": "$2a$10$NjIjdg/PNLtPnCWKY.9xh.QiIgvehGwXAm4g759xC.t38r153TXzq",
+      "prenom": "Mamadou",
+      "id": 4
     }
-  ]
+  ],
+  "register": []
 }

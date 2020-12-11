@@ -17,6 +17,9 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
 import {MatIconModule} from '@angular/material/icon';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { from } from 'rxjs';
+import {AuthService} from './services/auth.service';
+
 
 
 
@@ -44,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
     ],
   providers: [
+    AuthService,
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ],
   schemas: [
