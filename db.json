@@ -7,7 +7,7 @@
     },
     {
       "email": "sylla@momo.com",
-      "password": "$2a$10$RZI5QpMjx7UfN4Pa4Us0A.iSRBpkrb1Ygbc8JttU2vVIDOpMRMQpK",
+      "password": "$2a$10$qQ/voWQuaqvu403pv2SBIuciQ4Yxw0Z20cynUjAV2YjkliUh6xuV6",
       "id": 2
     },
     {
@@ -20,6 +20,11 @@
       "password": "$2a$10$NjIjdg/PNLtPnCWKY.9xh.QiIgvehGwXAm4g759xC.t38r153TXzq",
       "prenom": "Mamadou",
       "id": 4
+    },
+    {
+      "email": "msylla@momo.com",
+      "password": "$2a$10$0e9SdYzv4BttVj5kU4rnzu22/xMiqEEmP3BGqYDK/8Jkg2HHs0XqW",
+      "id": 5
     }
   ],
   "register": []

@@ -19,6 +19,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
 import {AuthService} from './services/auth.service';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {DefaultModule} from './layouts/default/default.module';
 
 
 
@@ -30,7 +32,7 @@ import {AuthService} from './services/auth.service';
     AppComponent,
     AuthComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,9 @@ import {AuthService} from './services/auth.service';
     ReactiveFormsModule,
     FormsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    DefaultModule
     ],
   providers: [
     AuthService,

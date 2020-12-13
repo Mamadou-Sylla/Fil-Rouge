@@ -29,9 +29,10 @@ export class AuthComponent implements OnInit {
   hide = true;
   userForm: any = {};
   userData = {
-    password: '',
     email: '',
+    password: ''
   };
+  tokenUser: any;
   constructor(private http: HttpClient ,
               public Authservices: AuthService,
               private router: Router) {}
@@ -47,8 +48,12 @@ export class AuthComponent implements OnInit {
   }
   // tslint:disable-next-line:typedef
   onSubmit() {
-    this.Authservices.login(this.userForm);
-      /*this.router.navigate(['/users']);*/
-    console.log(this.Authservices.decodeToken());
+   this.userData.email=this.userForm.email;
+    this.userData.password=this.userForm.password;
+    this.Authservices.getToken(this.userData);
+    this.tokenUser=this.Authservices.decodeToken();
+//    console.log(this.tokenUser.roles[0]);
+      this.Authservices.redirectByRole(this.tokenUser.roles[0]);
+
   }
 }
