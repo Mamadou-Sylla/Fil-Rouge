@@ -1,3 +1,10 @@
-<p>header</p>
-<router-outlet></router-outlet>
-<footer>Footer</footer>
+<app-header (toggleSideBarForMe)=(SideBarToggler($event))></app-header>
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="SideBarOpen">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+    <mat-drawer-content>
+      <app-dashbord></app-dashbord>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

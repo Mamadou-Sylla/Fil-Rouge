@@ -1,0 +1,50 @@
+:host{
+  .mat-icon{
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+.profile-card{
+  text-align: center;
+  padding: 20px;
+  img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.sidebar{
+  color: white;
+  height: 100%;
+  background-color: #138A8A;
+}
+   a {
+    padding: 1px;
+     color: white;
+     text-decoration:none;
+     font-size: 20px;
+     font-family: Salsa;
+   }
+  ul li:hover{
+    background-color: #34936e;
+  }
+  li{
+    list-style: none;
+  }
+  h2, h4{
+    font-family: Salsa;
+  }
+  h4{
+    font-size: 20px;
+  }
+
+  #icon_1{
+    padding-left: 100px;
+  }
+
+  #icon_2{
+    padding-left: 55px;
+  }
+
+}
+

@@ -7,10 +7,11 @@ import { RegisterComponent } from '../app/components/register/register.component
 import { AdminComponent } from '../app/modules/admin/admin.component';
 import {DashbordComponent} from './modules/dashbord/dashbord.component';
 import {DefaultComponent} from './layouts/default/default.component';
+import { ProfileComponent } from './shared/profile/profile.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/default', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'login',
     component: AuthComponent
@@ -26,10 +27,19 @@ const routes: Routes = [
   {
     path: 'default',
     component: DefaultComponent,
-    children: [{
+    children: [
+      {
       path: 'dashbord',
       component: DashbordComponent
-    }
+    },
+      {
+        path: 'admin',
+        component: AdminComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      }
     ]
   }
 ];

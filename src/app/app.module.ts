@@ -16,11 +16,12 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import { RegisterComponent } from './components/register/register.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { from } from 'rxjs';
 import {AuthService} from './services/auth.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {DefaultModule} from './layouts/default/default.module';
+import {InterceptorService} from './services/interceptor.service';
 
 
 
@@ -52,7 +53,8 @@ import {DefaultModule} from './layouts/default/default.module';
     ],
   providers: [
     AuthService,
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

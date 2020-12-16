@@ -48,12 +48,15 @@ export class AuthComponent implements OnInit {
   }
   // tslint:disable-next-line:typedef
   onSubmit() {
-   this.userData.email=this.userForm.email;
-    this.userData.password=this.userForm.password;
-    this.Authservices.getToken(this.userData);
-    this.tokenUser=this.Authservices.decodeToken();
+   this.userData.email = this.userForm.email;
+   this.userData.password = this.userForm.password;
+   this.Authservices.getToken(this.userData);
+   this.tokenUser = this.Authservices.decodeToken();
 //    console.log(this.tokenUser.roles[0]);
-      this.Authservices.redirectByRole(this.tokenUser.roles[0]);
-
+   if (this.tokenUser){
+     this.Authservices.redirectByRole(this.tokenUser.roles[0]);
+   }
+   console.log('User n\'existe pas');
+   this.router.navigate(['/login']);
   }
 }

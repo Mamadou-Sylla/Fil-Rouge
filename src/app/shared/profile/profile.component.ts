@@ -1,26 +1,15 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
-import {HttpClient} from '@angular/common/http';
-import {log} from 'util';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
-export class AdminComponent implements AfterViewInit {
+export class ProfileComponent implements AfterViewInit {
 
-  constructor(public http: HttpClient) {
-    this.http.get('http://127.0.0.1:8000/api/admin/users').subscribe(
-      data => {
-        console.log(data);
-      },
-      error => console.log(error)
-   );
-  }
-
-
+  constructor() { }
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
