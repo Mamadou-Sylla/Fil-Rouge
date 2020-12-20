@@ -91,9 +91,13 @@ export class AuthService {
     localStorage.removeItem('currentUser');
     // @ts-ignore
     this.currentUserSubject.next(null);
+    if(!this.currentUser){
+      this.router.navigate(['login']);
+    }
+    this.router.navigate(['login']);
   }
-
-  myToken(): unknown {
-   return this.localStorage.getItem('token')
+  // tslint:disable-next-line:typedef
+  myToken() {
+   return localStorage.getItem('token');
   }
 }

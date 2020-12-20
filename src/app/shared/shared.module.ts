@@ -13,6 +13,11 @@ import {MatListModule} from '@angular/material/list';
 import { ProfileComponent } from './profile/profile.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
+import { PostUserComponent } from './components/post-user/post-user.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -22,19 +27,24 @@ import {MatTableModule} from '@angular/material/table';
     FooterComponent,
     SidebarComponent,
     ProfileComponent,
+    PostUserComponent,
   ],
-  imports: [
-    CommonModule,
-    MatDividerModule,
-    MatButtonModule,
-    MatIconModule,
-    FlexModule,
-    MatMenuModule,
-    MatListModule,
-    RouterModule,
-    MatPaginatorModule,
-    MatTableModule
-  ],
+    imports: [
+        CommonModule,
+        MatDividerModule,
+        MatButtonModule,
+        MatIconModule,
+        FlexModule,
+        MatMenuModule,
+        MatListModule,
+        RouterModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatInputModule,
+        MatDialogModule
+    ],
     exports: [
         HeaderComponent,
         FooterComponent,

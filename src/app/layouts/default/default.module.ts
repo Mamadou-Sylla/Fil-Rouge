@@ -10,6 +10,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -21,15 +22,16 @@ import {MatIconModule} from '@angular/material/icon';
     DashbordComponent,
     AdminComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SharedModule,
-    MatSidenavModule,
-    MatDividerModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatIconModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        SharedModule,
+        MatSidenavModule,
+        MatDividerModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatIconModule,
+        MatFormFieldModule
+    ]
 })
 export class DefaultModule { }

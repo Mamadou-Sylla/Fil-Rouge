@@ -12,9 +12,6 @@ export class RepositoryService {
   getData(route: string): Observable<UserModel []> {
     return this.http.get<UserModel []>(route);
   }
-  /*private createCompleteRoute=(route:string,envAddress:string)=>{
-    return `${envAddress}/${route}`;
-  }*/
   private generateHeaders = () => {
     return{
       headers: new HttpHeaders({'Content-Type': 'application/json'})

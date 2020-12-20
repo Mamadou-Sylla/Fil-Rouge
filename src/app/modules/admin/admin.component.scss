@@ -5,13 +5,30 @@ table
 .outer
 {
   font-family: 'Salsa';
-  font-size: 20px;
+  font-size: 25px;
   background-color: #34936e;
   color: white;
   margin: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
 }
-.add-btn
-{
-  width: 25px;
-  height: 25px;
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
 }
+.btn-btn{
+  color:white;
+  border: none;
+  border-radius: 2px;
+}
+.btn_1{
+  background-color: #25255c;
+}
+.btn_2{
+  background-color: #e5a226;
+}
+.btn_3{
+  background-color: #bf1616;
+}
+

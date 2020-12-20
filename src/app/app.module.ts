@@ -17,11 +17,14 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
 import {MatIconModule} from '@angular/material/icon';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { from } from 'rxjs';
 import {AuthService} from './services/auth.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {DefaultModule} from './layouts/default/default.module';
 import {InterceptorService} from './services/interceptor.service';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSortModule} from '@angular/material/sort';
+import {AdminComponent} from './modules/admin/admin.component';
+
 
 
 
@@ -49,7 +52,9 @@ import {InterceptorService} from './services/interceptor.service';
     MatIconModule,
     HttpClientModule,
     MatGridListModule,
-    DefaultModule
+    DefaultModule,
+    MatDialogModule,
+    MatSortModule
     ],
   providers: [
     AuthService,
@@ -59,6 +64,7 @@ import {InterceptorService} from './services/interceptor.service';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AdminComponent]
 })
 export class AppModule { }

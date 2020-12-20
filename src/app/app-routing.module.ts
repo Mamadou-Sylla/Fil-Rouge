@@ -8,30 +8,31 @@ import { AdminComponent } from '../app/modules/admin/admin.component';
 import {DashbordComponent} from './modules/dashbord/dashbord.component';
 import {DefaultComponent} from './layouts/default/default.component';
 import { ProfileComponent } from './shared/profile/profile.component';
+import {PostUserComponent} from './shared/components/post-user/post-user.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  {
-    path: 'login',
-    component: AuthComponent
-  },
-  {
-    path: 'accueil',
-    component: HomeComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
-    path: 'default',
-    component: DefaultComponent,
-    children: [
-      {
-      path: 'dashbord',
-      component: DashbordComponent
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    {
+      path: 'login',
+      component: AuthComponent
     },
+    {
+      path: 'accueil',
+      component: HomeComponent
+    },
+    {
+      path: 'register',
+      component: RegisterComponent
+    },
+    {
+      path: 'default',
+      component: DefaultComponent,
+      children: [
+        {
+        path: 'dashbord',
+        component: DashbordComponent
+      },
       {
         path: 'admin',
         component: AdminComponent
@@ -39,7 +40,11 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent
-      }
+      },
+        {
+          path: 'postuser',
+          component: PostUserComponent
+        }
     ]
   }
 ];
